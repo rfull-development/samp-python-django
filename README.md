@@ -17,5 +17,9 @@ This repository is a sample for Django.
     ```
 1. Execute API server
     ```bash
-    python -m src
+    export SECRET_KEY='<YOUR SECRET KEY>'
+    cd service
+    python manage.py makemigrations api
+    python manage.py migrate
+    python manage.py runserver
     ```
